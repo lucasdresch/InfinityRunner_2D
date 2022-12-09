@@ -6,7 +6,7 @@ public class CameraFollowScript : MonoBehaviour {
     
     private Transform targetCamera;
     public float speedCam;
-    public float offsetX;
+    public float offsetX, offsetY;
 
     // Start is called before the first frame update
     void Start() {
@@ -15,7 +15,7 @@ public class CameraFollowScript : MonoBehaviour {
 
     // Update is called once per frame
     void LateUpdate() {
-        Vector3 newCamPos = new Vector3(targetCamera.position.x + offsetX, 0f, transform.position.z);
+        Vector3 newCamPos = new Vector3(targetCamera.position.x + offsetX, offsetY, transform.position.z);
         transform.position = Vector3.Slerp(transform.position, newCamPos, speedCam * Time.deltaTime);
     }
 }
