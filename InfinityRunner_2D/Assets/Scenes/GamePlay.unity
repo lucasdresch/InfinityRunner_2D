@@ -430,8 +430,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1077102354}
-  speed: 4
-  jumpForce: 15
+  speed: 6
+  jumpForce: 10
+  isJumping: 0
 --- !u!50 &1147224229
 Rigidbody2D:
   serializedVersion: 4
@@ -546,6 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinalPoint: {fileID: 1053353860}
+  offsetY: 0
 --- !u!1 &1424833223
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinalPoint: {fileID: 432004156}
+  offsetY: 0
 --- !u!1 &1824601955
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +633,8 @@ MonoBehaviour:
   - {fileID: 8331642638896746063, guid: d30b4e4460a7389449fb48b54734d8ed, type: 3}
   currentPlatforms: []
   plat: {fileID: 0}
-  offset: 30
+  offsetSpawnX: 30
+  offsetSpawnY: -3
 --- !u!4 &1824601957
 Transform:
   m_ObjectHideFlags: 0
@@ -743,4 +747,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedCam: 10
   offsetX: 5
-  offsetY: 5

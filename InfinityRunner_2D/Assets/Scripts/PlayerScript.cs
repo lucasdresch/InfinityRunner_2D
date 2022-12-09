@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviour {
 
     public float speed;
     public float jumpForce;
-
+    [SerializeField]
     private bool isJumping;
     
 

@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinalPoint: {fileID: 6905032664394944273}
+  offsetY: 1
 --- !u!1 &7326018263456145890
 GameObject:
   m_ObjectHideFlags: 0

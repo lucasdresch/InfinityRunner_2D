@@ -12,18 +12,19 @@ public class SpawnPlatform : MonoBehaviour {
     private Transform currentPlatformsPoint;
     private int platformIndex;
 
-
     public GameObject plat;
-    public float offset;
+    private float offsetSpawn;
+    public float offsetSpawnX;
+    public float offsetSpawnY;
 
     // Start is called before the first frame update
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         for(int i = 0; i < platforms.Count; i++) {
-            Transform p = Instantiate(platforms[i], new Vector2(i * 30, 0), transform.rotation).transform;
+            Transform p = Instantiate(platforms[i], new Vector2(i * 30, offsetSpawnY), transform.rotation).transform;
             currentPlatforms.Add(p);
-            offset += 30f;
+            offsetSpawn += offsetSpawnX;
         }
         CurrentPlatPoint();
     }
@@ -36,8 +37,8 @@ public class SpawnPlatform : MonoBehaviour {
         Move();
     }
     public void Recycle(GameObject plats) {
-        plats.transform.position = new Vector2(offset, 0f);
-        offset += 30f;
+        plats.transform.position = new Vector2(offsetSpawn, offsetSpawnY);
+        offsetSpawn += offsetSpawnX;
     }
     void Move() {
         float distance = player.position.x - currentPlatformsPoint.position.x; //pega distancia entre o player e o finalPoint da plataforma atual
@@ -48,7 +49,7 @@ public class SpawnPlatform : MonoBehaviour {
             if(platformIndex > currentPlatforms.Count - 1) {
                 platformIndex = 0;
             }
-                CurrentPlatPoint();
+            CurrentPlatPoint();
         }
     }
 

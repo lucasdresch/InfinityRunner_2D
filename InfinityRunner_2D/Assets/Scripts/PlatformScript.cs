@@ -5,4 +5,5 @@ using UnityEngine;
 public class PlatformScript : MonoBehaviour
 {
     public Transform FinalPoint;
+    //public float offsetY;
 }
