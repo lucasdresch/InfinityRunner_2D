@@ -37,7 +37,10 @@ public class PlayerScript : MonoBehaviour {
             anim.SetBool("JumpingBool", false);
             isJumping = false;
         }
-
     }
-
+    void OnCollisionExit2D(Collision2D collision) {
+        if (collision.gameObject.layer == 8) {
+            isJumping = true;
+        }
+    }
 }
