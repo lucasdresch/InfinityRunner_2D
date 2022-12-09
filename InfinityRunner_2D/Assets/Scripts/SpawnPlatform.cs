@@ -34,7 +34,6 @@ public class SpawnPlatform : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         Move();
-        test();
     }
     public void Recycle(GameObject plats) {
         plats.transform.position = new Vector2(offset, 0f);
@@ -53,11 +52,6 @@ public class SpawnPlatform : MonoBehaviour {
         }
     }
 
-    public void test() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            Recycle(plat);
-        }
-    }
 
 
 }
