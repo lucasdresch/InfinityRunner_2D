@@ -7,7 +7,7 @@ public class EnemyScript : MonoBehaviour {
     public float spdEnemy;
     public float enemyLifeTime;
     //create a type of enemies
-
+    public bool enemyTypeFly;
     
     // Start is called before the first frame update
     void Start() {
@@ -17,6 +17,10 @@ public class EnemyScript : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate() {
+        //check enemy type
+        //if typeFly = true
         rig.velocity = Vector2.left * spdEnemy;
+        //else if typeFly = false
+            //code
     }
 }

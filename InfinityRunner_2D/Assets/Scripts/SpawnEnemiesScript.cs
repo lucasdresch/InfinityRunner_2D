@@ -8,6 +8,10 @@ public class SpawnEnemiesScript : MonoBehaviour {
     public float spawnTime;
     public float minPosY, maxPosY;
     private float posY;
+    
+    //enemy index
+    //type of enemy
+    private bool enemyFly;
 
     // Start is called before the first frame update
     void Start() {
@@ -28,7 +32,12 @@ public class SpawnEnemiesScript : MonoBehaviour {
     }
 
     void SpawnEnemy() {
-        RandomNum(minPosY, maxPosY, posY);
-        Instantiate(enemiesList[Random.Range(0, enemiesList.Count)], transform.position + new Vector3(0f, posY, 0f), transform.rotation);
+        //check enemy type index
+            //get enemy type
+        //if enemyFly true
+            RandomNum(minPosY, maxPosY, posY);
+            Instantiate(enemiesList[Random.Range(0, enemiesList.Count)], transform.position + new Vector3(0f, posY, 0f), transform.rotation);
+        //if enemyFly false
+            //code
     }
 }

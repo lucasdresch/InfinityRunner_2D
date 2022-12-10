@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6346108346817618021}
   - component: {fileID: 5255697211480586229}
   m_Layer: 0
-  m_Name: Sprite08
+  m_Name: EnemySprite08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
