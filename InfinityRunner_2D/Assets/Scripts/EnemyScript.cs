@@ -18,9 +18,14 @@ public class EnemyScript : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate() {
         //check enemy type
+
         //if typeFly = true
-        rig.velocity = Vector2.left * spdEnemy;
+        if (enemyTypeFly == true) {
+            rig.velocity = Vector2.left * spdEnemy;
+        } else if (enemyTypeFly == false) {
+
+        }
         //else if typeFly = false
-            //code
+        //code
     }
 }

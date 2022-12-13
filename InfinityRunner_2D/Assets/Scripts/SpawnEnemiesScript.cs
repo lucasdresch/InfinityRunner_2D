@@ -27,17 +27,31 @@ public class SpawnEnemiesScript : MonoBehaviour {
         }
     }
 
-    void RandomNum(float num1, float num2, float res) {
+    void RandomNum(float num1, float num2, float res, bool isInt) {
         res = Random.Range(num1, num2);
+        float rest;
+        if (isInt == true)
+        {
+            rest = res % 1;
+            res = res - rest;
+        }
     }
-
     void SpawnEnemy() {
+        RandomNum(minPosY, maxPosY, posY, false);
         //check enemy type index
-            //get enemy type
+        int indexEnemy = 0;
+        RandomNum(0, enemiesList.Count, indexEnemy, true);
+        //get enemy type
+        enemyFly = enemiesList[indexEnemy].GetComponent<EnemyScript>().enemyTypeFly;
         //if enemyFly true
-            RandomNum(minPosY, maxPosY, posY);
-            Instantiate(enemiesList[Random.Range(0, enemiesList.Count)], transform.position + new Vector3(0f, posY, 0f), transform.rotation);
-        //if enemyFly false
-            //code
+        if (enemyFly == true) {
+            Instantiate(enemiesList[indexEnemy], transform.position + new Vector3(0f, posY, 0f), transform.rotation);
+        } else if (enemyFly == false) { //if enemyFly false
+            //get spawnPlatForEnemy
+            //instantiate in spawnPlatForEnemy position
+        }
+
+
+        
     }
 }

@@ -68,7 +68,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.01}
   serializedVersion: 2
   m_Radius: 0.4
 --- !u!114 &8324145968928574292
@@ -85,6 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spdEnemy: 0
   enemyLifeTime: 0
+  enemyTypeFly: 0
 --- !u!1 &7904301610792585338
 GameObject:
   m_ObjectHideFlags: 0
