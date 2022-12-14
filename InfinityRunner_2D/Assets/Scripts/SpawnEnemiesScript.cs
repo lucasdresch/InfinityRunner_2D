@@ -30,8 +30,7 @@ public class SpawnEnemiesScript : MonoBehaviour {
     void RandomNum(float num1, float num2, float res, bool isInt) {
         res = Random.Range(num1, num2);
         float rest;
-        if (isInt == true)
-        {
+        if (isInt == true) {
             rest = res % 1;
             res = res - rest;
         }
