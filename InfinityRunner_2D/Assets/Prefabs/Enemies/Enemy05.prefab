@@ -184,5 +184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae995573935de9342a90483e33c04dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spdEnemy: 0
-  enemyLifeTime: 0
+  spdEnemy: 1.5
+  enemyLifeTime: 9
+  enemyTypeFly: 1

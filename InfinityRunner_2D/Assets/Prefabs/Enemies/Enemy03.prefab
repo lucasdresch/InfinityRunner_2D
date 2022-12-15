@@ -83,8 +83,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae995573935de9342a90483e33c04dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spdEnemy: 0
-  enemyLifeTime: 0
+  spdEnemy: 3
+  enemyLifeTime: 5
+  enemyTypeFly: 0
 --- !u!1 &8033263968673956130
 GameObject:
   m_ObjectHideFlags: 0

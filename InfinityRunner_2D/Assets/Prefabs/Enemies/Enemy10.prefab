@@ -186,3 +186,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spdEnemy: 3
   enemyLifeTime: 4
+  enemyTypeFly: 1
