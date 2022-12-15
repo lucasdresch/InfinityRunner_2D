@@ -48,6 +48,7 @@ public class SpawnEnemiesScript : MonoBehaviour {
         } else if (enemyFly == false) { //if enemyFly false
             //get spawnPlatForEnemy
             //instantiate in spawnPlatForEnemy position
+            Instantiate(enemiesList[indexEnemy], enemiesList[indexEnemy].GetComponent<EnemyScript>().spawnPosition.transform.position + new Vector3(0f, posY, 0f), transform.rotation);
         }
 
 

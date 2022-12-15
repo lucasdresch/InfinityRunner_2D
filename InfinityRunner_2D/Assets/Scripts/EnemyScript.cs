@@ -8,6 +8,7 @@ public class EnemyScript : MonoBehaviour {
     public float enemyLifeTime;
     //create a type of enemies
     public bool enemyTypeFly;
+    public Transform spawnPosition;
     
     // Start is called before the first frame update
     void Start() {
