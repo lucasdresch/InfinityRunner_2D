@@ -9,6 +9,7 @@ public class EnemyScript : MonoBehaviour {
     //create a type of enemies
     public bool enemyTypeFly;
     public Transform spawnPosition;
+    private int flip = 1;
     
     // Start is called before the first frame update
     void Start() {
@@ -24,9 +25,16 @@ public class EnemyScript : MonoBehaviour {
         if (enemyTypeFly == true) {
             rig.velocity = Vector2.left * spdEnemy;
         } else if (enemyTypeFly == false) {
-
+            //if flip
+            rig.velocity = Vector2.left * spdEnemy * flip;
         }
         //else if typeFly = false
         //code
     }
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (enemyTypeFly == false && collision.gameObject.layer == 9) {
+            flip = flip * -1;
+        }
+    }
+
 }

@@ -5,5 +5,6 @@ using UnityEngine;
 public class PlatformScript : MonoBehaviour
 {
     public Transform FinalPoint;
+    public Transform[] SpawnEnemy;
     //public float offsetY;
 }

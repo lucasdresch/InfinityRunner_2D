@@ -11,6 +11,7 @@ public class SpawnPlatform : MonoBehaviour {
     private Transform player;
     private Transform currentPlatformsPoint;
     private int platformIndex;
+    public Transform spawnsOfEnemies;
 
     public GameObject plat;
     private float offsetSpawn;
@@ -31,6 +32,9 @@ public class SpawnPlatform : MonoBehaviour {
 
     void CurrentPlatPoint() {
         currentPlatformsPoint = currentPlatforms[platformIndex].GetComponent<PlatformScript>().FinalPoint; //accessa a variavel do compnente (do tipo script) anexado ao objeto
+    }
+    void NextSpawnEnemy() {
+        //spawnsOfEnemies = 
     }
     // Update is called once per frame
     void Update() {
