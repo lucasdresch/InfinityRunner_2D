@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 3584259685840529815}
   - component: {fileID: 251543451466996717}
   - component: {fileID: 7597335375328096110}
+  - component: {fileID: -6764634652098216403}
   m_Layer: 0
   m_Name: Bomb03
   m_TagString: Untagged
@@ -147,5 +148,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b356b3ee77cfe66439b5cbcadb36429c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceX: 0
-  forceY: 0
+  forceX: 1
+  forceY: 3
+--- !u!60 &-6764634652098216403
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6547821890851481299}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.7, y: 0}
+      - {x: 0.45, y: -0.15}
+      - {x: 0.31, y: -0.29}
+      - {x: 0.3, y: -0.5}
+      - {x: 0.45, y: -0.65}
+      - {x: 0.65, y: -0.65}
+      - {x: 0.78, y: -0.55}
+      - {x: 0.83, y: -0.35}
+      - {x: 0.75, y: -0.2}

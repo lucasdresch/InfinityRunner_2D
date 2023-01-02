@@ -8,6 +8,9 @@ public class SpawnEnemiesScript : MonoBehaviour {
     public float spawnTime;
     public float minPosY, maxPosY;
     private float posY;
+    private BoxCollider2D bc2d;
+    [SerializeField]
+    private Transform spawnPlatPos;
     
     //enemy index
     //type of enemy
@@ -15,14 +18,16 @@ public class SpawnEnemiesScript : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        bc2d = gameObject.GetComponent<BoxCollider2D>();
         SpawnEnemy();
+        timeCount = timeCount - 10.0f;
     }
 
     // Update is called once per frame
     void Update() {
         timeCount += Time.deltaTime;
         if(timeCount >= spawnTime) {
-            SpawnEnemy();
+        //    SpawnEnemy();
             timeCount = 0f;
         }
     }
@@ -46,12 +51,17 @@ public class SpawnEnemiesScript : MonoBehaviour {
         if (enemyFly == true) {
             Instantiate(enemiesList[indexEnemy], transform.position + new Vector3(0f, posY, 0f), transform.rotation);
         } else if (enemyFly == false) { //if enemyFly false
-            //get spawnPlatForEnemy
+//            enemiesList[indexEnemy].GetComponent<EnemyScript>().spawnPosition.transform.position = spawnPlatPos.position;
             //instantiate in spawnPlatForEnemy position
-            Instantiate(enemiesList[indexEnemy], enemiesList[indexEnemy].GetComponent<EnemyScript>().spawnPosition.transform.position + new Vector3(0f, posY, 0f), transform.rotation);
+            Instantiate(enemiesList[indexEnemy], spawnPlatPos.position, enemiesList[indexEnemy].transform.rotation);
         }
 
+    }
+    void OnTriggerEnter2D(Collider2D collision){
+        Debug.Log(collision.gameObject.name);
 
-        
+        if(collision.gameObject.layer == 8) {
+            spawnPlatPos = collision.gameObject.GetComponent<PlatformScript>().SpawnEnemy[Random.Range(0,1)];
+        }
     }
 }

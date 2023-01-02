@@ -42,7 +42,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3316694233792001973}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -54,7 +54,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!58 &6632233116218617092
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   spdEnemy: 3
   enemyLifeTime: 5
   enemyTypeFly: 0
-  spawnPosition: {fileID: 0}
+  fireObj: {fileID: 6547821890851481299, guid: d48d360dc330a6d43886706411f6f2ee, type: 3}
 --- !u!1 &8033263968673956130
 GameObject:
   m_ObjectHideFlags: 0

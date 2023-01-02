@@ -160,6 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 852642534}
+  - component: {fileID: 852642536}
   - component: {fileID: 852642535}
   m_Layer: 0
   m_Name: SpawnEnemiesObj
@@ -176,7 +177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852642533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.28, y: 0, z: 10}
+  m_LocalPosition: {x: 20, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2051230250}
@@ -208,6 +209,33 @@ MonoBehaviour:
   spawnTime: 5
   minPosY: 0
   maxPosY: 5
+  spawnPlatPos: {fileID: 852642534}
+--- !u!61 &852642536
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852642533}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 20}
+  m_EdgeRadius: 0
 --- !u!1 &1053353859
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinalPoint: {fileID: 1053353860}
+  SpawnEnemy: []
 --- !u!1 &1424833223
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinalPoint: {fileID: 432004156}
+  SpawnEnemy: []
 --- !u!1 &1824601955
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +616,7 @@ MonoBehaviour:
   - {fileID: 6373814768300292067, guid: 66e7047699ebbe648afbe6b7b9bf6aa3, type: 3}
   - {fileID: 8331642638896746063, guid: d30b4e4460a7389449fb48b54734d8ed, type: 3}
   currentPlatforms: []
+  spawnsOfEnemies: {fileID: 0}
   plat: {fileID: 0}
   offsetSpawnX: 30
   offsetSpawnY: -3
